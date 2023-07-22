@@ -1532,14 +1532,9 @@ dependencies = [
  "acvm",
  "bincode",
  "bytesize",
- "console_error_panic_hook",
- "getrandom",
  "reqwest",
- "serde-wasm-bindgen",
  "serde_json",
  "thiserror",
- "tokio",
- "wasm-bindgen",
 ]
 
 [[package]]
@@ -1547,20 +1542,16 @@ name = "noir_halo2_backend_pse"
 version = "0.1.0"
 dependencies = [
  "acvm",
- "console_error_panic_hook",
  "criterion",
  "ecc",
- "getrandom",
  "halo2wrong",
  "maingate",
  "noir_halo2_backend_common",
  "rand",
  "serde",
- "serde-wasm-bindgen",
  "serde_json",
  "snark-verifier 0.1.0",
- "tokio",
- "wasm-bindgen",
+ "thiserror",
 ]
 
 [[package]]

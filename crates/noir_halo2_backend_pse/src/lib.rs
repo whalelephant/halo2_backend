@@ -7,7 +7,7 @@ mod constrains;
 mod halo2_params;
 pub mod halo2_plonk_api;
 mod tests;
-#[cfg(target_family = "wasm")]
+#[cfg(all(target_family = "wasm", not(feature = "cosmwasm")))]
 mod wasm;
 
 #[derive(Debug, Clone)]

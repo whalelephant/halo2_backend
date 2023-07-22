@@ -40,6 +40,7 @@ pse_snark_verifier = { git = "https://github.com/privacy-scaling-explorations/sn
 #     "circuit-params",
 # ] }
 # pse_zkevm_circuit = { git = "https://github.com/privacy-scaling-explorations/zkevm-circuits", package = "zkevm-circuits", tag = "v0.3.1" }
+thiserror = "1.0.21"
 
 [dev-dependencies]
 criterion = "0.5.1"

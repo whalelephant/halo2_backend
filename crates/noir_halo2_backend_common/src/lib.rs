@@ -4,5 +4,5 @@ pub mod utils;
 
 #[cfg(not(feature = "cosmwasm"))]
 pub mod aztec_crs;
-#[cfg(target_family = "wasm")]
+#[cfg(all(target_family = "wasm", not(feature = "cosmwasm")))]
 pub mod wasm;
