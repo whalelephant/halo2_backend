@@ -1,3 +1,5 @@
+#![cfg(not(feature = "cosmwasm"))]
+
 use std::rc::Rc;
 
 use acvm::SmartContract;
