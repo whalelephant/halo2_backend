@@ -56,10 +56,10 @@ harness = false
 name = "bench_noir_halo2_pse_verify"
 harness = false
 
-# can only build on linux because the use of a c lib
-[target.'cfg(target_family = "wasm")'.dependencies]
-console_error_panic_hook.workspace = true
-getrandom.workspace = true
-serde-wasm-bindgen.workspace = true
-tokio.workspace = true
-wasm-bindgen.workspace = true
+## can only build on linux because the use of a c lib
+#[target.'cfg(target_family = "wasm")'.dependencies]
+#console_error_panic_hook.workspace = true
+#getrandom.workspace = true
+#serde-wasm-bindgen.workspace = true
+#tokio.workspace = true
+#wasm-bindgen.workspace = true
