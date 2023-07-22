@@ -12,6 +12,7 @@ pub enum FeatureError {
 }
 
 #[derive(Debug, Error)]
+#[cfg(not(feature = "cosmwasm"))]
 pub enum CRSError {
     #[error("Failed to deserialize CRS")]
     _Deserialize { source: Box<bincode::ErrorKind> },
@@ -26,6 +27,15 @@ pub enum CRSError {
     Length { url: String },
     #[error("Error while downloading file")]
     Download { source: reqwest::Error },
+}
+
+#[derive(Debug, Error)]
+#[cfg(feature = "cosmwasm")]
+pub enum CRSError {
+    #[error("Failed to deserialize CRS")]
+    _Deserialize { source: Box<bincode::ErrorKind> },
+    #[error("Failed to serialize CRS")]
+    _Serialize { source: Box<bincode::ErrorKind> },
 }
 
 #[allow(clippy::upper_case_acronyms)]

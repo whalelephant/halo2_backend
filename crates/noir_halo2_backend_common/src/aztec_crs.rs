@@ -1,3 +1,4 @@
+#![cfg(not(feature = "cosmwasm"))]
 use crate::errors::{CRSError, Error};
 use bytesize::ByteSize;
 use std::env;
