@@ -209,7 +209,7 @@ pub struct OpcodeFlags {
 }
 
 impl OpcodeFlags {
-    pub(crate) fn new(opcodes: &[Opcode]) -> OpcodeFlags {
+    pub fn new(opcodes: &[Opcode]) -> OpcodeFlags {
         // opcode params
         let mut arithmetic = false;
         let mut range = false;
